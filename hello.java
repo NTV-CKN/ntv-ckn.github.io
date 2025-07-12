@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.function.Function;
 
 class hello1 {
 
@@ -6,6 +7,8 @@ class hello1 {
         System.out.println("Call " + tmp());
         System.out.println("Call2 " + (100 - tmp2()));
         System.out.println(1100 +"Call2");
+        Function<Integer, String> convert = number -> {return "NUmber is: " + number; };
+        System.out.println(convert.apply(2));
 
     }
 
