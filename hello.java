@@ -3,22 +3,29 @@ import java.util.function.Function;
 
 class hello1 {
 
-    public static void main(String[] args) {
-        System.out.println("Call " + tmp());
-        System.out.println("Call2 " + (100 - tmp2()));
-        System.out.println(1100 +"Call2");
-        Function<Integer, String> convert = number -> {return "NUmber is: " + number; };
-        System.out.println(convert.apply(2));
+    public static void main(String[] args) throws Exception {
+        System.out.println(1);
 
-    }
+        System.out.println(2);
 
-    private static String tmp() {
-        System.out.println("Call inner 1");
-        return "End";
-    }
 
-    private static int tmp2() {
-        System.out.println("Call inner 2");
-        return 2;
+        new Thread(() -> {
+            try {
+                Thread.sleep(4500);
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            System.out.println("Hello world1");
+        }).start();
+        //Thread.sleep(4500);
+        new Thread(() -> {
+            System.out.println("Hello world2");
+        }).start();
+
+        System.out.println(3);
+
+        System.out.println(4);
+
     }
 }
