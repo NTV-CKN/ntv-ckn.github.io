@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.kotlinflow",
+      "sha256_cert_fingerprints": [
+        "93:4E:21:9A:0F:B5:69:C6:0D:F0:BB:85:BB:33:EE:2F:98:20:0B:45:07:50:BD:0B:94:40:28:0A:F0:39:8B:4E"
+      ]
+    }
+  }
+]
